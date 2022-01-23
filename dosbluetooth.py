@@ -1,5 +1,6 @@
 import subprocess
 import time
+import os
 
 print("""
  ██████╗ ██╗   ██╗███████╗██████╗     ██████╗ ██╗██████╗ ███████╗
@@ -15,7 +16,7 @@ Copywrite dsxz19-2
 
 def scan():
         print("[+] Enabling bluetooth...")
-        subprocess.run(["sudo", "hciconfig", "hci0", "up"])
+        os.system("sudo hciconfig hci0 up"])
         print("[+] Done!")
         print("[+] Scanning for MAC address...")
         subprocess.run(["hcitool", "scan"])
